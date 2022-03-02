@@ -6,7 +6,6 @@ arr=(
 
 arr_len=${#arr[@]}
 
-
 res=$(expr $arr_len - 1)
 
 res2=$(expr $arr_len \* 2)
@@ -33,15 +32,14 @@ echo '---'
 num1=15
 num2=10
 
-echo $(( num1 + num2 ))
-echo $(( num1 - num2 ))
-echo $(( num1 * num2 ))
-echo $(( num1 / num2 ))
-echo $(( num1 % num2 ))
+echo $((num1 + num2))
+echo $((num1 - num2))
+echo $((num1 * num2))
+echo $((num1 / num2))
+echo $((num1 % num2))
 
 echo "--"
 
-echo "20 + 0.5"  | bc 
-echo "20.5 / 5"  | bc -l
+echo "20 + 0.5" | bc
+echo "20.5 / 5" | bc -l
 echo "scale=2; 20.5 / 5" | bc -l
-
