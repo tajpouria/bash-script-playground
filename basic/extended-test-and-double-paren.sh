@@ -79,3 +79,8 @@ echo $?
 
 echo '---'
 
+# $() Alternative but it's not that support
+p=$[ 2 + 2 ]
+echo $p
+
+
