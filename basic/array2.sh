@@ -30,10 +30,10 @@ echo '---'
 
 
 unset Unix[3]
-echo "${Unix[3]}" # Echo null cuz index is still threre and just vaule has been removed.
+echo "${Unix[3]}" # Echo null cuz index is still there and just value has been removed.
 echo '---'
 
-# To completly remove an element from array.
+# To complexly remove an element from array.
 idx=3
 Unix=("${Unix[@]:0:$idx}" "${Unix[@]:$idx}")
 echo "${Unix[$idx]}" # Next index will be replaced since.

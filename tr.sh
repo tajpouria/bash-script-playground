@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-##
-# General
-##
+###########
+# General #
+##########
 
 # os.getcwd()
 DIR_PATH="$(
@@ -13,9 +13,9 @@ DIR_PATH="$(
 # a = a || "DEFAULT_VALUE"
 a=${a:DEFAULT_VALUE}
 
-##
-# String
-##
+##########
+# String #
+#########
 
 # arr = list("hello;world")
 arr=$(echo "hello;world" | fold -w1)
@@ -25,14 +25,6 @@ arr=($(echo "hello;world" | tr ";" "\n"))
 
 # string.strip()
 echo "   lol  " | xargs
-
-##
-# Array
-##
-
-# if len(arr or str) < 1:
-if [ "${#inp}" -lt 1 ]; then
-fi
 
 # if string1 == string2:
 if [[ "$string1" == "$string2" || ("$string1" =~ ^2[0-9]{2}$ && "$string2" =~ .*Linux.*) ]]; then
@@ -48,9 +40,26 @@ if ! [[ "$s_inp" =~ $regex ]]; then
   exit 1
 fi
 
-##
-# Loop
-##
+#########
+# Array #
+########
+
+# if len(arr or str) < 1:
+if [ "${#inp}" -lt 1 ]; then
+fi
+
+# arr.append("New el")
+Unix=("${Unix[@]}" "New el" "New el2")
+
+# arr = arr[i:i+4]
+Unix="${Unix[@]:0:4}"
+
+# del arr[0:0+i]
+Unix=("${Unix[@]:0:4}" "${Unix[@]:i}")
+
+########
+# Loop #
+#######
 
 # for i in range(string):
 #   ch = string[i]
@@ -58,9 +67,9 @@ for i in "${!string[@]}"; do
   ch = "${string[$i]}"
 done
 
-##
-# Math
-##
+#########
+# Math #
+#######
 
 # if num % 2 == 0: print("Even")
 # else: print("Odd")
