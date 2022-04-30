@@ -30,7 +30,7 @@ echo "   lol  " | xargs
 # Array
 ##
 
-# if len(arr) < 1:
+# if len(arr or str) < 1:
 if [ "${#inp}" -lt 1 ]; then
 fi
 
